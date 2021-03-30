@@ -1,2 +1,2 @@
 # famuli
-FAster Modle Utils LIb.
+FAster Machine-learning Utils LIb.

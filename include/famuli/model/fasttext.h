@@ -8,6 +8,7 @@
 
 #include <string>
 #include <memory>
+#include <sstream>
 #include "spdlog/spdlog.h"
 #include "fasttext.h"
 #include "./model.h"
@@ -38,6 +39,15 @@ class Fasttext : public ModelBase {
     spdlog::info("Starts loading fastText model: {}", this->model_path_);
     this->model_.loadModel(this->model_path_);
     spdlog::info("Finished loading fastText model: {}", this->model_path_);
+  }
+
+  void run(std::vector< std::pair<float, std::string> >* outputs, 
+      const std::string& inputs) {
+    spdlog::info("Starts inference");
+    std::stringstream inputs_;
+    inputs_ << inputs;
+    this->model_.predictLine(inputs_, *outputs, 3, 0.01);
+    spdlog::info("Finished inference"); 
   }
 
 

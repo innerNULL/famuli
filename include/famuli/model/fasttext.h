@@ -51,7 +51,7 @@ class Fasttext : public ModelBase {
   }
 
   static void print_outputs(std::vector< std::pair<float, std::string> >& outputs) {
-    spdlog::info("Fastte4xt output: ");
+    spdlog::info("Fasttext output: ");
     for (std::vector< std::pair<float, std::string> >::iterator iter = outputs.begin(); 
         iter < outputs.end(); ++iter) {
       spdlog::info("\tlabel: {0}, score: {1}", iter->second, iter->first);

@@ -17,8 +17,14 @@ set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake;${CMAKE_MODULE_PATH}")
 include(fastText_pkg)
 include(spdlog_pkg)
 
+#set(LIB_SOURCE ./src/model/fasttext.cpp)
+aux_source_directory(./src/model/ LIB_SOURCE)
+
 include_directories(${PROJECT_SOURCE_DIR}/include)
+add_library(famuli_static STATIC ${LIB_SOURCE})
 
 set(DEMO ./demo/demo.cpp)
 add_executable(demo ${DEMO})
-target_link_libraries(demo PRIVATE ${fastText_lib})
+target_link_libraries(demo PUBLIC famuli_static)
+target_link_libraries(demo PUBLIC ${fastText_lib})
+#target_link_libraries(demo PRIVATE ${fastText_lib})

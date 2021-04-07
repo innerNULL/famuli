@@ -18,5 +18,6 @@ int main() {
   std::vector< std::pair<float, std::string> > predictions;
   fasttext.run(&predictions, 
       "上 海 老 相 机 制 造 博 物 馆 即 将 开 门 迎 客");
+  famuli::Fasttext::print_outputs(predictions);
   return 0;
 }

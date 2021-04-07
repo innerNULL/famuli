@@ -23,6 +23,7 @@ class ModelBase {
 
   virtual void init() {}
   virtual void load() {}
+  static void print_outputs() {}
 
  protected:
   std::string model_path_;

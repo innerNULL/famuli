@@ -50,6 +50,14 @@ class Fasttext : public ModelBase {
     spdlog::info("Finished inference"); 
   }
 
+  static void print_outputs(std::vector< std::pair<float, std::string> >& outputs) {
+    spdlog::info("Fastte4xt output: ");
+    for (std::vector< std::pair<float, std::string> >::iterator iter = outputs.begin(); 
+        iter < outputs.end(); ++iter) {
+      spdlog::info("\tlabel: {0}, score: {1}", iter->second, iter->first);
+    }
+  }
+
 
  protected:
   fasttext::FastText model_;

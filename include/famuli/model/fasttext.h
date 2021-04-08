@@ -9,8 +9,8 @@
 #include <string>
 #include <memory>
 #include <sstream>
-#include "spdlog/spdlog.h"
-#include "fasttext.h"
+#include <spdlog/spdlog.h>
+#include <fasttext.h>
 #include "./model.h"
 
 

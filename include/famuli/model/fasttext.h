@@ -41,7 +41,7 @@ class Fasttext : public ModelBase {
     spdlog::info("Finished loading fastText model: {}", this->model_path_);
   }
 
-  void run(std::vector< std::pair<float, std::string> >* outputs, 
+  void infer(std::vector< std::pair<float, std::string> >* outputs, 
       const std::string& inputs) {
     spdlog::info("Starts inference");
     std::stringstream inputs_;

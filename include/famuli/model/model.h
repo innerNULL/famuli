@@ -23,6 +23,7 @@ class ModelBase {
 
   virtual void init() {}
   virtual void load() {}
+  virtual void infer() {}
   static void print_outputs() {}
 
  protected:

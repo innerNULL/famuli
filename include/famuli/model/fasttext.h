@@ -10,7 +10,8 @@
 #include <memory>
 #include <sstream>
 #include <spdlog/spdlog.h>
-#include <fasttext.h>
+#include <fasttext/fasttext.h>
+
 #include "./model.h"
 
 

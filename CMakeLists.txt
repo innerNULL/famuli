@@ -37,7 +37,8 @@ cmakeup_pkg_cmake_importer("gabime" "spdlog")
 cmakeup_integrate_gabime_spdlog("v1.x" "null" "global")
 cmakeup_pkg_cmake_importer("abseil" "abseil-cpp")
 cmakeup_integrate_abseil_abseil_cpp("master" "null" "global")
-
+cmakeup_pkg_cmake_importer("libeigen" "eigen")
+cmakeup_integrate_libeigen_eigen("master" "null" "global")
 
 #aux_source_directory(./src/model/ LIB_SOURCE)
 

@@ -51,3 +51,8 @@ add_executable(demo ${DEMO})
 #target_link_libraries(demo PUBLIC famuli_static)
 target_link_libraries(demo PUBLIC ${CMAKEUP_STATIC_LIB_facebookresearch_fastText_master})
 target_link_libraries(demo PUBLIC absl::strings)
+
+# dev
+add_executable(graph_dev ./dev/graph_dev.cpp)
+target_link_libraries(graph_dev PUBLIC ${CMAKEUP_STATIC_LIB_facebookresearch_fastText_master})
+target_link_libraries(graph_dev PUBLIC absl::strings)
